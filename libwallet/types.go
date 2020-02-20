@@ -228,4 +228,6 @@ type TxLogEntry struct {
 	Messages *ParticipantMessages `json:"messages"`
 	// Location of the store transaction, (reference or resending)
 	StoredTx *string `json:"stored_tx"`
+
+	KernelLookupMinHeight uint64 `json:"kernel_lookup_min_height"`
 }
