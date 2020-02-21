@@ -27,6 +27,12 @@ type grinAPI struct {
 	GrinServerAPI string
 }
 
+func NewGrinServerApi(addr string) *grinAPI {
+	grinApi := grinAPI{GrinServerAPI: addr}
+
+	return &grinApi
+}
+
 // GetBlockReward queries the node to get the block reward with fees
 func (grinAPI *grinAPI) GetBlockReward(blockHash string) (uint64, error) {
 	block, err := grinAPI.GetBlockByHash(blockHash)
